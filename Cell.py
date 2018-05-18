@@ -12,9 +12,18 @@ class Cell:
 
     @property
     def type(self):
-        return self.type
+        return self.__type
+
+    @property
+    def state(self):
+        return self.__state
 
     @type.setter
     def type(self, t):
         self.type = t
 
+
+    def is_alive(self):
+        if self.state == 1:
+            return True
+        return False
